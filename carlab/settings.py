@@ -77,6 +77,7 @@ WSGI_APPLICATION = 'carlab.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'carlabdb',
         'DATABASE': 'carlabdb',
         'USER': 'carlabAdmin@carlab-mysqldbserver',
         'PASSWORD': 'carLab2332',
