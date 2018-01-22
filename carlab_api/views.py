@@ -28,22 +28,22 @@ def get_categories(request, service_id):
     subcategories = []
     categories = Category.objects.filter(service_id = service_id).values('name', 'price', 'duration', 'id', 'image', 'sub_cat')
 
-    for category in categories:
-
-        if category['sub_cat'] != False:
-            sub_category = getSubCategories(category['id'])
-
-        else:
-
-
+    # for category in categories:
+    #
+    #     if category['sub_cat'] != False:
+    #         sub_category = getSubCategories(category['id'])
+    #
+    #     else:
+    #
+    #
+    #
+    # return JsonResponse({
+    # 'category': list(data),
+    # 'sub_categories': list(sub_category)
+    # })
 
     return JsonResponse({
-    'category': list(data),
-    'sub_categories': list(sub_category)
-    })
-
-    return JsonResponse({
-    'category': list(data),
+    'category': list(categories),
     })
 
 
