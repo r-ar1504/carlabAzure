@@ -67,6 +67,7 @@ class Worker(models.Model):
     def __unicode__(self):
         return self.name
 
+
 #Order Model
 class Order(models.Model):
     service = models.CharField(max_length=100)
@@ -78,7 +79,7 @@ class Order(models.Model):
     longitude = models.CharField(max_length=100)
     rating = models.CharField(max_length=100)
     comments = models.TextField()
-    ammount = models.CharField(max_length=30)
+    ammount = models.CharField(max_length=100)
     car_plate = models.CharField(max_length=20)
     created_at = models.DateTimeField(auto_now_add=True)
     service_date = models.DateTimeField()
